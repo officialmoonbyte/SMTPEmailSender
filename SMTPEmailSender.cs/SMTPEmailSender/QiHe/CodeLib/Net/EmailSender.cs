@@ -16,16 +16,17 @@ namespace QiHe.CodeLib.Net
             IPAddress[] servers = GetMailExchangeServer(domainName);
             foreach (IPAddress server in servers)
             {
-                try
-                {
+          //      try
+            //    {
                     SmtpClient client = new SmtpClient(server.ToString(), SmtpPort);
                     client.Send(from, to, subject, body);
                     return true;
-                }
-                catch
-                {
-                    continue;
-                }
+              //  }
+                //catch (Exception e)
+               // {
+                 //   Console.WriteLine(e.Message);
+                   // continue;
+               // }
             }
             return false;
         }
@@ -42,8 +43,9 @@ namespace QiHe.CodeLib.Net
                     client.Send(mailMessage);
                     return true;
                 }
-                catch
+                catch (Exception e)
                 {
+                    Console.WriteLine(e.Message);
                     continue;
                 }
             }

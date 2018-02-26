@@ -252,8 +252,9 @@ namespace QiHe.CodeLib.Net
 
                 udpClient.Close();
             }
-            catch
+            catch (Exception e)
             {
+                Console.WriteLine(e.Message);
             }
 
             return retVal;
