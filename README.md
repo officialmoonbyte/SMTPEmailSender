@@ -8,3 +8,7 @@ that will be used in future project's to verify the user when reseting the passw
 
 To use, just use the mail loader at the namespace 
 indiegoat.SMTP.loader(string From, string To, string Subject, string Body)
+
+All of my repos has been moved to my private repository. To contribute, please view https://repository.moonbyte.net/braydel/SMTPEmailSender
+
+All of my repositories are still online, but I recently had a project where I needed branch protection and I was not willing to pay github for it.
